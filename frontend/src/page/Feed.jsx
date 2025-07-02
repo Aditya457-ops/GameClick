@@ -6,6 +6,7 @@ import { getFeed } from '../reduxSetup/Slices/feedSlice';
 import { getUserPost } from '../reduxSetup/Slices/userPostSlice'
 import { getLikePost } from '../reduxSetup/Slices/likePostSlice'
 import '../style/feed.css'
+import Loading from '../components/Loading';
 
 const Feed = () => {
 
@@ -24,7 +25,7 @@ const Feed = () => {
   if(loading) {
     return (
       <div>
-        <p> loading... </p>
+        <Loading/>
       </div>
     )
   } else if(error.length !== 0 || error)  {

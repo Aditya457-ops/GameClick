@@ -4,6 +4,7 @@ import Post from '../components/Post'
 import { getUserPost } from '../reduxSetup/Slices/userPostSlice'
 import { getLikePost } from '../reduxSetup/Slices/likePostSlice'
 import { useEffect } from 'react'
+import Loading from '../components/Loading'
 
 const Profile = () => {
 
@@ -32,7 +33,7 @@ const Profile = () => {
   if(loading) {
     return (
       <div>
-        <p> loading... </p>
+        <Loading/>
       </div>
     )
   } else if(error.length !== 0 || error)  {
