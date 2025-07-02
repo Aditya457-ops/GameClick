@@ -1,0 +1,1 @@
+A place where, user can share in-game photos/screenshots. Created using MERN stack, redux for state management and cloudinary for image storage.
