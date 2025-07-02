@@ -16,7 +16,9 @@ app.use('/path/post', postRoutes);
 
 connectDB();
 
-app.listen(process.env.PORT, () => {
-    console.log(`server started on port: ${process.env.PORT}`);
+const port = process.env.PORT || 8080
+
+app.listen(port, () => {
+    console.log(`server started on port: ${port}`);
     
 });
