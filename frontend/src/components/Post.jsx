@@ -16,7 +16,7 @@ const Post = ({ username, image, title, caption, postId, profile, likers, userId
 
   async function handleDelete() {
     try {
-      await axios.delete(`http://localhost:4000/path/post/delete/${postId}`, {
+      await axios.delete(`https://gameclick.onrender.com/path/post/delete/${postId}`, {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -32,7 +32,7 @@ const Post = ({ username, image, title, caption, postId, profile, likers, userId
 
   async function handleLikeToggle(e) {
     try {
-      await axios.patch(`http://localhost:4000/path/post/like/${postId}`, null, {
+      await axios.patch(`https://gameclick.onrender.com/path/post/like/${postId}`, null, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

@@ -6,7 +6,7 @@ export const getFeed = createAsyncThunk (
     async(_, { getState }) => {
         const { login } = getState();
         const token = login.token;
-        const response = await axios.get(`http://localhost:4000/path/post/allpost`, {
+        const response = await axios.get(`https://gameclick.onrender.com/path/post/allpost`, {
             headers: {
                 'Authorization': `Bearer ${token}`
             }

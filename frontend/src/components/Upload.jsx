@@ -33,7 +33,7 @@ const Upload = () => {
         formData.append('title',title);
         
         try {
-            const response = await axios.post(`http://localhost:4000/path/post/uploadpost`, formData,
+            const response = await axios.post(`https://gameclick.onrender.com/path/post/uploadpost`, formData,
                 {
                     headers: {
                         'Content-Type': 'multipart/form-data',

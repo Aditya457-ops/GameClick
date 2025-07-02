@@ -5,7 +5,7 @@ export const setUser = createAsyncThunk(
   'signup/setUser',
   async ({ username, email, password }, { rejectWithValue }) => {
     try {
-      const response = await axios.post(`http://localhost:4000/path/auth/signin`, {
+      const response = await axios.post(`https://gameclick.onrender.com/path/auth/signin`, {
         username,
         email,
         password

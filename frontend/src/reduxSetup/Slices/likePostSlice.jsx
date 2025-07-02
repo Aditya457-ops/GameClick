@@ -7,7 +7,7 @@ export const getLikePost = createAsyncThunk (
     async(_, { getState }) => {
         const { login } = getState();
         const token = login.token;
-        const response = await axios.get("http://localhost:4000/path/post/likeposts", {
+        const response = await axios.get("https://gameclick.onrender.com/path/post/likeposts", {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
