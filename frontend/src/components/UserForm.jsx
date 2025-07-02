@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux'
-import LogIn from './LogIn'
+import LogIn from './Login'
 import Signup from './Signup'
 
 const UserForm = () => {
