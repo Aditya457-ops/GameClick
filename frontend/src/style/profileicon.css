@@ -1,0 +1,27 @@
+.profile-icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #cde0f5;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 3px 3px 0 #88a;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.profile-icon-button:hover {
+  background-color: #aac7e0;
+  box-shadow: 2px 2px 0 #666;
+}
+
+.profile-icon {
+  width: 24px;
+  height: 24px;
+  color: #4a4a4a;
+}
+
+.profile-icon-pos {
+    margin: 50px;
+}

@@ -1,0 +1,207 @@
+@font-face {
+  font-family: 'librebarcode';
+  src: url('../assets/LibreBarcode128.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'bitcountgrid';
+  src: url('../assets/bitcountgrid.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'abel';
+  src: url('../assets/Abel-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* signup.css */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.log-background {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* LEFT SIDE – GameClick */
+.website-logo {
+  width: 60%;
+  background-color: black;
+  color: white;
+  font-family: 'bitcountgrid';
+  font-size: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 80px;
+  letter-spacing: 0px;
+}
+
+/* RIGHT SIDE – gray background */
+.log-bg {
+  width: 40%;
+  background-color: #d3d3d3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Signup box */
+.loginform {
+  background-color: burlywood;
+  border-radius: 20px;
+  box-shadow: -10px 10px 0 #333;
+  padding: 30px;
+  width: 100%;                /* use % instead of fixed px */
+  max-width: 400px;          /* set an upper limit */
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+}
+
+
+/* Signup heading */
+.loginform > p {
+  margin: 10px;
+  margin-left: 0;
+  font-size: 30px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-family: 'abel';
+}
+
+/* Form inputs */
+.loginform input {
+  font-family: 'abel';
+  align-self: center;       /* Stretch to fit container */
+  padding: 10px;
+  width: 100%;               /* Full width */
+  border: 3.5px solid black;
+  background-color: #f2f2f2;
+  font-size: 20px;
+}
+
+
+/* Submit button */
+.log-button {
+  margin-top: 50px;
+  padding: 10px;
+  font-size: 20px;
+  font-family: 'abel';
+  background-color: burlywood;
+  border-radius: 12px;
+  border: 2px solid black;
+  box-shadow: -10px 10px 0 #333;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.2s ease;
+}
+
+.loginform button:hover {
+  transform: translateY(-2px);
+}
+
+.sign-bg > p {
+  margin-top: 50px;
+}
+
+.sign-bg > p:hover {
+  cursor: pointer;
+}
+
+.error-text {
+  color: #ff4d4f;
+  font-weight: 500;
+  margin-top: 15px;
+  text-align: center;
+  font-family: 'abel';
+}
+
+/* Tablet and below (≤ 1024px) */
+@media (max-width: 1024px) {
+  .website-logo {
+    font-size: 70px;
+    padding-top: 60px;
+    margin-right: 100px;
+  }
+
+  .loginform {
+    width: 300px;
+  }
+}
+
+/* Mobile and below (≤ 768px) */
+@media (max-width: 768px) {
+  .log-background {
+    flex-direction: column;
+  }
+
+  .website-logo {
+    width: 100%;
+    font-size: 60px;
+    padding: 40px 0;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+
+  .log-bg {
+    width: 100%;
+    padding: 40px 0;
+  }
+
+  .loginform {
+    width: 90%;
+    padding: 20px;
+    box-shadow: -5px 5px 0 #333;
+  }
+
+  .log-button {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .loginform input {
+    width: 100%;
+    margin: 0;
+  }
+
+  .sign-bg > p {
+    margin-top: 20px;
+  }
+}
+
+/* Very small devices (≤ 480px) */
+@media (max-width: 480px) {
+  .website-logo {
+    font-size: 40px;
+    padding-top: 30px;
+  }
+
+  .loginform p {
+    font-size: 24px;
+  }
+
+  .log-button {
+    font-size: 16px;
+    padding: 8px;
+  }
+
+  .loginform input {
+    font-size: 16px;
+    padding: 8px;
+  }
+}
+

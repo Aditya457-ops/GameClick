@@ -1,0 +1,33 @@
+@font-face {
+  font-family: 'librebarcode';
+  src: url('../assets/LibreBarcode128.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'bitcountgrid';
+  src: url('../assets/bitcountgrid.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'abel';
+  src: url('../assets/Abel-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.feedheader {
+    display: flex;
+    justify-content: space-between;
+    background-color: burlywood;
+}
+
+.feedheader > p {
+    font-size: 40px;
+    margin: 40px;
+    font-family: 'abel';
+    color: white;
+}

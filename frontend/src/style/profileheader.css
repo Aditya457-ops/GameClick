@@ -1,0 +1,158 @@
+/* ----------------------------------
+   Font Imports
+---------------------------------- */
+@font-face {
+  font-family: 'librebarcode';
+  src: url('../assets/LibreBarcode128.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'bitcountgrid';
+  src: url('../assets/bitcountgrid.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'abel';
+  src: url('../assets/Abel-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ----------------------------------
+   Layout & Profile
+---------------------------------- */
+
+.profile-header {
+  padding: 40px;
+  background-color: burlywood;
+}
+
+.profile-post {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.feed-log {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  color: white;
+}
+
+.name-upload {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background-color: #000;
+  color: white;
+}
+
+.logout-upload {
+  display: flex;
+  gap: 20px;
+}
+
+/* ----------------------------------
+   Profile Salute & Avatar
+---------------------------------- */
+
+.profile-salute {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.profile-avatar {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  color: #000;
+  font-weight: bold;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 3px 3px 0 #888;
+}
+
+.welcome-username {
+  font-size: 18px;
+  font-family: 'abel', sans-serif;
+  margin: 0;
+}
+
+/* ----------------------------------
+   Post Filter Tabs
+---------------------------------- */
+
+.post-filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Paragraph-based filters (JS-controlled active state) */
+.post-filter p {
+  background-color: #d3d3d3;
+  padding: 10px 20px;
+  border-radius: 12px;
+  box-shadow: 3px 3px 0 #666;
+  cursor: pointer;
+  font-family: 'abel', sans-serif;
+  font-weight: bold;
+  color: #000;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.post-filter p:hover {
+  background-color: #bcbcbc;
+  transform: translateY(-2px);
+  box-shadow: 4px 4px 0 #444;
+}
+
+.post-filter p.active {
+  background-color: #999;
+  color: white;
+  box-shadow: inset 3px 3px 0 #444;
+  transform: none;
+}
+
+/* Radio input-based filters (CSS-only toggle) */
+.post-filter input[type="radio"] {
+  display: none;
+}
+
+.post-filter label {
+  padding: 10px 20px;
+  background-color: #d3d3d3;
+  border-radius: 12px;
+  box-shadow: 3px 3px 0 #666;
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  cursor: pointer;
+  color: black;
+  transition: all 0.2s ease;
+}
+
+.post-filter label:hover {
+  background-color: #bcbcbc;
+  transform: translateY(-2px);
+  box-shadow: 4px 4px 0 #444;
+}
+
+.post-filter input[type="radio"]:checked + label {
+  background-color: #999;
+  color: white;
+  box-shadow: inset 3px 3px 0 #444;
+  transform: none;
+}

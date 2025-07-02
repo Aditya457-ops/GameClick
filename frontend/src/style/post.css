@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'abel';
+  src: url('../assets/Abel-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.delete-button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.delete-button:hover{
+    background-color: #d93636;
+}
+
+.like-count {
+    font-family: 'abel';
+    font-size: 20px;
+    font-weight: 500;
+}
