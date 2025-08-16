@@ -48,8 +48,6 @@ const Post = ({ username, image, title, caption, postId, profile, likers, userId
     }
   }
 
-  console.log("liked..?", likers.includes(userId))
-
   return (
     <div className="w-[250px] h-[350px] rounded-xl overflow-hidden flex flex-col shadow-md m-5">
       <div className="relative w-full h-[300px] bg-[#DEDEDE]">

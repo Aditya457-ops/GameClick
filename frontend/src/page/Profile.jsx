@@ -27,7 +27,6 @@ const Profile = () => {
     disPosts = likeposts;
   }
 
-  console.log("posts: ",disPosts);
   const {username} = useSelector((state) => state.login)
 
   if(loading) {
