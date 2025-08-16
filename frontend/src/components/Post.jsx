@@ -48,7 +48,7 @@ const Post = ({ username, image, title, caption, postId, profile, likers, userId
   return (
     <div className="w-[250px] h-[350px] rounded-xl overflow-hidden flex flex-col shadow-md m-5">
       <div className="relative w-full h-[300px] bg-[#DEDEDE]">
-        <img src={image} alt="photo" className="w-full h-full object-cover" />
+        <img src={image} alt="photo" className="w-[250px] h-[250px] object-cover" />
         <div className="absolute top-6 left-6">
           <p className="text-xs text-gray-600 font-mono opacity-80">#{username}</p>
         </div>
