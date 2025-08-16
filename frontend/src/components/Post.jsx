@@ -9,9 +9,6 @@ import { getLikePost } from '../reduxSetup/Slices/likePostSlice'
 const Post = ({ username, image, title, caption, postId, profile, likers, userId }) => {
 
   const { token } = useSelector((state) => state.login);
-
-  console.log("userId: ", userId);
-  console.log("likers: ", likers);
   const dispatch = useDispatch();
 
   async function handleDelete() {

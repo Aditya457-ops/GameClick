@@ -15,7 +15,6 @@ const ProfileHeader = ({username}) => {
 
     function handleClick(mode) {
 
-        console.log("clicked")
         dispatch(setMode(mode));
     }
 
