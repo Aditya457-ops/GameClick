@@ -46,34 +46,62 @@ const Post = ({ username, image, title, caption, postId, profile, likers, userId
   }
 
   return (
-    <div className="w-[250px] h-[350px] rounded-xl overflow-hidden flex flex-col shadow-md m-5">
-      <div className="relative w-full h-[300px] bg-[#DEDEDE]">
-        <img src={image} alt="photo" className="w-full h-full object-cover" />
-        <div className="absolute top-6 left-6">
-          <p className="text-xs text-gray-600 font-mono opacity-80">#{username}</p>
-        </div>
+  <div className="w-[250px] h-[350px] rounded-xl overflow-hidden flex flex-col shadow-md m-5">
+    {/* Image Section */}
+    <div className="relative w-full flex-1 bg-[#DEDEDE]">
+      <img 
+        src={image} 
+        alt="photo" 
+        className="w-full h-full object-cover"  // makes the image auto-fit
+      />
+      <div className="absolute top-2 left-2">
+        <p className="text-xs text-gray-600 font-mono opacity-80">#{username}</p>
+      </div>
+    </div>
+
+    {/* Content Section */}
+    <div className="bg-white w-full p-3 flex flex-col justify-between h-[100px]">
+      <div>
+        <p className="text-lg font-medium text-[#3C3C43] font-mono truncate">
+          {title}
+        </p>
+        <p className="text-sm text-gray-600 font-mono leading-[18px] line-clamp-2">
+          {caption}
+        </p>
       </div>
 
-      <div className="bg-white w-full h-[140px] p-6 flex flex-col gap-1">
-        <p className="text-lg font-medium text-[#3C3C43] font-mono">{title}</p>
-        <p className="text-sm text-gray-600 font-mono leading-[18px]">{caption}</p>
+      <div className="flex items-center justify-between mt-1">
+        {likers.includes(userId) ? (
+          <span
+            className="material-symbols-outlined material-symbols-outlined-red cursor-pointer"
+            onClick={handleLikeToggle}
+          >
+            favorite
+          </span>
+        ) : (
+          <span
+            className="material-symbols-outlined cursor-pointer"
+            onClick={handleLikeToggle}
+          >
+            favorite
+          </span>
+        )}
 
-        {
-          likers.includes(userId) ? <span className='material-symbols-outlined material-symbols-outlined-red' onClick={handleLikeToggle}>favorite</span> : <span className='material-symbols-outlined' onClick={handleLikeToggle}>favorite</span>
-        }
-
-        {
-          profile ? "" : <p className='like-count'> {likers.length > 0 ? likers.length : 0} likes </p>
-        }
+        {!profile && (
+          <p className="text-xs text-gray-500">
+            {likers.length > 0 ? likers.length : 0} likes
+          </p>
+        )}
 
         {profile && (
-          <button onClick={handleDelete} className="delete-button">
+          <button onClick={handleDelete} className="delete-button text-xs">
             Delete
           </button>
         )}
       </div>
     </div>
-  );
-};
+  </div>
+);
+
 
 export default Post;
